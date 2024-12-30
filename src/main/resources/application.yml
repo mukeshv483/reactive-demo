@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: local
+---
+spring:
+  profiles:
+    activate:
+      on-profile:
+        - local
+  data:
+    mongodb:
+      host: localhost
+      port: 27107
+      database: local
+---
+spring:
+  profiles:
+    activate:
+      on-profile:
+        - non-prod
+  data:
+    mongodb:
+      host: localhost
+      port: 27107
+      database: non-prod
+
